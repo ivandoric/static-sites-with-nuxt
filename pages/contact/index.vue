@@ -1,6 +1,9 @@
 <template>
-    <div>
-        Contact page
+    <div class="container">
+        <h2 class="title">
+            Contact page
+            <span class="subtitle">This is a subtitle</span>
+        </h2>
     </div>
 </template>
 
@@ -18,3 +21,20 @@
         }
     }
 </script>
+
+<style lang="scss">
+    .container {
+        width: 960px;
+        margin: 40px auto;
+        background: $blue;
+
+        .title {
+            font-size: 36px;
+        }
+
+        .subtitle {
+            display: block;
+            font-size: 18px;
+        }
+    }
+</style>
