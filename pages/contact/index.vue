@@ -22,19 +22,3 @@
     }
 </script>
 
-<style lang="scss">
-    .container {
-        width: 960px;
-        margin: 40px auto;
-        background: $blue;
-
-        .title {
-            font-size: 36px;
-        }
-
-        .subtitle {
-            display: block;
-            font-size: 18px;
-        }
-    }
-</style>

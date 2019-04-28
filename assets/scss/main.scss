@@ -1,2 +1,33 @@
 @import "variables";
 
+.MainHeader {
+    background: #efefef;
+
+    ul {
+        list-style: none;
+        margin: 0 0 20px 0;
+        padding: 0;
+        display: flex;
+
+        ul {
+            display: none;
+        }
+
+        li {
+            margin-right: 20px;
+            padding: 10px;
+        }
+    }
+}
+
+.posts {
+    margin-top: 40px;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    .post {
+        margin-bottom: 40px;
+    }
+}
