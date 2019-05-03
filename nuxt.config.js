@@ -1,4 +1,5 @@
 import pkg from './package'
+import axios from 'axios'
 
 export default {
     mode: 'universal',
@@ -54,6 +55,19 @@ export default {
         scss: [
             'assets/scss/_variables.scss'
         ]
+    },
+
+    generate: {
+        routes: () => {
+            return axios.get('http://nuxt-wp.localhost/wp-json/wp/v2/posts').then((res) => {
+                return res.data.map((post) => {
+                    return {
+                        route: 'blog/' + post.slug,
+                        payload: post
+                    }
+                })
+            })
+        }
     },
 
     /*

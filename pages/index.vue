@@ -8,7 +8,10 @@
             <div class="post" v-for="post in posts" :key="post.id">
                 <h4>{{ post.title.rendered }}</h4>
 
-                <div class="post-content" v-html="post.excerpt.rendered"></div>
+                <div class="post-content" v-html="post.excerpt.rendered" />
+                <nuxt-link :to="{ name: 'blog-slug', params: { slug: post.slug, id: post.id } }">
+                    Read More
+                </nuxt-link>
             </div>
         </div>
     </section>
@@ -33,9 +36,10 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     .container {
         margin: 0 auto;
         width: 960px;
+        border-bottom: 1px solid red;
     }
 </style>
